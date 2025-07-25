@@ -17,6 +17,10 @@ $("document").ready(function () {
   });
 
   $("#turn_on").click(function () {
+    // 防止重复点击
+    if ($(this).hasClass("clicked")) return;
+    $(this).addClass("clicked");
+
     $("#bulb_yellow").addClass("bulb-glow-yellow");
     $("#bulb_red").addClass("bulb-glow-red");
     $("#bulb_blue").addClass("bulb-glow-blue");
@@ -33,6 +37,10 @@ $("document").ready(function () {
       });
   });
   $("#play").click(function () {
+    // 防止重复点击
+    if ($(this).hasClass("clicked")) return;
+    $(this).addClass("clicked");
+
     var audio = $(".song")[0];
     audio.play();
     $("#bulb_yellow").addClass("bulb-glow-yellow-after");
@@ -53,6 +61,10 @@ $("document").ready(function () {
   });
 
   $("#bannar_coming").click(function () {
+    // 防止重复点击
+    if ($(this).hasClass("clicked")) return;
+    $(this).addClass("clicked");
+
     $(".bannar").addClass("bannar-come");
     $(this)
       .fadeOut("slow")
@@ -115,6 +127,10 @@ $("document").ready(function () {
   }
 
   $("#balloons_flying").click(function () {
+    // 防止重复点击
+    if ($(this).hasClass("clicked")) return;
+    $(this).addClass("clicked");
+
     $(".balloon-border").animate({ top: -500 }, 8000);
     // $("#b1,#b4,#b5,#b7").addClass("balloons-rotate-behaviour-one");
     $("#b3,#b4,#b5").addClass("balloons-rotate-behaviour-one");
@@ -142,6 +158,10 @@ $("document").ready(function () {
   });
 
   $("#cake_fadein").click(function () {
+    // 防止重复点击
+    if ($(this).hasClass("clicked")) return;
+    $(this).addClass("clicked");
+
     $(".cake").fadeIn("slow");
     $(this)
       .fadeOut("slow")
@@ -153,6 +173,10 @@ $("document").ready(function () {
   });
 
   $("#light_candle").click(function () {
+    // 防止重复点击
+    if ($(this).hasClass("clicked")) return;
+    $(this).addClass("clicked");
+
     $(".fuego").fadeIn("slow");
     $(this)
       .fadeOut("slow")
@@ -192,6 +216,10 @@ $("document").ready(function () {
   });
 
   $("#story").click(function () {
+    // 防止重复点击
+    if ($(this).hasClass("clicked")) return;
+    $(this).addClass("clicked");
+
     $(this).fadeOut("slow");
     $(".cake")
       .fadeOut("fast")
